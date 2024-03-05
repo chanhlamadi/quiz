@@ -19,7 +19,7 @@ export default function Results() {
 
     const fetchData = async () => {
         try {
-            const response = await fetch(`${process.env.API}/answers/${id}`);
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API}/answers/${id}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch data');
             }

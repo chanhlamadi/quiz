@@ -12,7 +12,7 @@ import QLoading from "../components/QLoading";
 
 // Function to fetch data from the server
 async function fetchData() {
-    const res = await fetch(`${process.env.API}/questions/random`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API}/questions/random`);
     if (!res.ok) {
         throw new Error('Failed to fetch data');
     }
@@ -22,8 +22,7 @@ async function fetchData() {
 // Function to send data to the server
 async function sendDataToServer(data) {
     try {
-        console.log(data)
-        const res = await fetch(`${process.env.API}/answers`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API}/answers`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

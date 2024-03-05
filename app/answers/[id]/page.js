@@ -9,7 +9,7 @@ import { NextButton, SubmitButton } from "@/components/Buttons";
 import QLoading from "@/app/components/QLoading";
 
 async function fetchData(id) {
-    const res = await fetch(`${process.env.API}/answers/${id}?populate=questions`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API}/answers/${id}?populate=questions`);
     if (!res.ok) {
         throw new Error('Failed to fetch data');
     }
